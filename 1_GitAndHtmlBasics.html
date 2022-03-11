@@ -1,4 +1,55 @@
 <!--
+GitHub Basics: https://www.youtube.com/watch?v=-LfyYDuryT4
+
+My GitHub Account: katukojwalark, URL: https://github.com/katukojwalark
+    Repository: rk_web_fs, URL: https://github.com/katukojwalark/rk_web_fs
+
+Steps I followed:
+    1. Create a branch, we do not work on the main branch. Youucan create it from the github branch dropdown or use a git commnd 'git checout my-branch'
+    2. Adding the upstream for 'rk_web_fs': 
+        $ git remote add upstream  https://github.com/katukojwalark/rk_web_fs
+    3. Adding the Origin: 
+        $ git remote add origin https://github.com/katukojwalark/rk_web_fs.git (copy this Link from the drop down code from your main branch)
+    4. Check for the Upstream and Origin: 
+        $ git remote -v
+        
+        You should see the Origin and Upstream for fetch and push as follows,
+
+        $ git remote -v
+        origin  https://github.com/katukojwalark/rk_web_fs.git (fetch)
+        origin  https://github.com/katukojwalark/rk_web_fs.git (push)
+        upstream        https://github.com/katukojwalark/rk_web_fs (fetch)
+        upstream        https://github.com/katukojwalark/rk_web_fs (push)
+    5. Fetch upstream: downloads commits, files, and refs from a remote repository into your local repo. 
+        Fetching is what you do when you want to see what everybody else has been working on.
+
+        $ git fetch upstream
+
+    6. Update your codebase:
+
+        $ git rebase upstream/main
+
+    7. Make your code changes.  You have already created the branch. If not created, use $ git checkout -b my-branch-name. This command will creates and switches you  to the created branch.
+    8. You have made your code changes check the files that are modified or added using,
+
+        $ git status
+
+    9. Now you can stage the files you are about to commit using $ git add file-name or you can stage all, if you find the status displays only the files you want to commt
+
+        $ git add .
+
+    10. You have staged your changes and are ready to commit to your peersonal branch.  Double check the files that you want to commit using the,
+        
+        $ git status
+
+    11. $ git commit or git commit -m "my message desccribing the commiting changes"
+
+    12. You have commited the changes to your personal branch. You need to share it to others to get the code reviews done.
+
+        $ git push origin rk-branch
+
+    13. Go to GitHub and raise PR from there.
+    14. On successful review merge your changes to the main branch. (Do this on GitHub)
 Layout: 
     An HTML layout is a blueprint used to arrange web pages in a well-defined manner. It is easy to navigate, simple to understand and uses HTML tags to customize web      design elements. Crucial for any website, an HTML layout that uses the correct format will easily improve a website’s appearance.
     A page layout defines the appearance of a website. An HTML layout is a structure that helps the user navigate through web pages easily. It is a way in which you can design web pages using simple HTML tags.
