@@ -14,10 +14,52 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
  </head>
+
+ <style>
+    header{
+        background-color: aquamarine;
+        color: black;
+        text-align: center;
+        padding: 5px;
+        /* margin: 80px; */
+    }
+    nav{
+        line-height: 30px;
+        background-color: aliceblue;
+        height: 30px;
+        width: max-content;
+        float: left;
+        padding: 5px;
+        margin: 50px;
+    }
+    section{
+        width: 350px;
+        float: left;
+        padding: 10px;
+        margin: 50px;
+    }
+    article{
+        width: 350px;
+        float: left;
+    }
+    aside{
+        width: 3000px;
+        float: left;
+        padding-top: 10px;
+    }
+    footer{
+        background-color: bisque;
+        color: brown;
+        clear: both;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
  <body>
      <!-- Layout -->
      
-     <!-- HTML -->
+     <!-- HTML Old fashioned. Can be carried out with div tags and proper Head tags.-->
      <div>
          <div>1</div>
          <div>2</div>
@@ -25,20 +67,21 @@
          <div>4</div>
      </div>
  
-     <!-- HTML5 -->
+     <!-- HTML5.  This is the best layout structure to follow. Good for Search Engine Optimization -->
      <header>
          Header
-         <nav>Nav</nav>
+         <nav>nav: Home, Logo, etc. </nav>
      </header>
-     <article>
-         Article
+     <main>
          <section>
-             <article>Section</article>
+             Section
+             <article>article: A page section. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, repudiandae tenetur officia exercitationem rem consequatur    saepe facere velit vitae assumenda veniam eum dolor adipisci eligendi beatae. Recusandae quisquam enim nostrum.
+             </article>
+             <aside>aside: Side Content. content aside from the actual content.. something that is different but somewhat related. Advertisements etc.</aside>
          </section>
-     </article>
-     <aside>Side Content</aside>
-     <footer>Footer</footer>
-     <!-- <video src="/video/20160918_100859.mp4" type="video/mp4">browser does not support</video> -->
+         <footer>footer: Footer Section</footer>
+         <summary>summary: This defines a heading for the 'details' element</summary>
+     </main>
      
  </body>
  </html>
