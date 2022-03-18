@@ -39,7 +39,19 @@ var arr = ['rose', 'jasmine', 'lotus', ['violet', 'yellow']]
 
 console.log(arr[3][1])
 
-var map = {flowers:['rose', 'jasmine', 'lotus'],
-            colors: ['violet', 'yellow']}
+// Objects. Key Name
+ var person = {
+     name: "Rajesh",
+     age: 30,
+     number: 900000000,
+     "pin code": 500000,
+     favColors: ["red", "green", "blue"],
+     favMovies: {genre: {comedy: ["movie1", "movie2", "movie3"]}}
+ }
 
-console.log(map.colors[0])
+ console.log(person)
+ console.log(person.number)
+ console.log(person["pin code"])
+
+ console.log(person.favMovies.genre.comedy[2])
+
