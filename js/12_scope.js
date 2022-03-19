@@ -47,5 +47,3 @@ console.log("Global this.a: ", this.a);  // Prints 10
 
 console.log("Global a: ", a);  // Prints 10
 console.log("Global this.a: ", this.a);  // Prints 10
-
-let b = 5;
