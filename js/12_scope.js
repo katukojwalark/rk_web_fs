@@ -47,3 +47,22 @@ console.log("Global this.a: ", this.a);  // Prints 10
 
 console.log("Global a: ", a);  // Prints 10
 console.log("Global this.a: ", this.a);  // Prints 10
+
+// Problem: In the following code, how can you access the functions add, subtract, and multply from outside _Math?
+// For example, console.log(_Math.add(2,2)); throws Uncaught TypeError.
+
+var _Math = (function() {
+    function add(a, b) { return a+b;}
+    function subtract(a, b) { return a-b;}
+    function multiply(a, b) { return a*b;}
+})();
+
+// Solution:
+var _MathLib = (function() {
+    return{
+        add : function(a, b) { return a+b; },
+        subtract : function(a, b) { return a-b; },
+        multiply : function(a, b) { return a*b; }
+    };
+}());
+console.log(_MathLib.subtract(1,2));
