@@ -65,7 +65,6 @@ var _MathLib = (function() {
         multiply : function(a, b) { return a*b; }  //multiply(a, b) { return a*b; }
     };
 }());
-<<<<<<< HEAD
 
 console.log(_MathLib.add(5,2));
 console.log(_MathLib.subtract(5,2));
@@ -88,6 +87,4 @@ const _Math1 = (function() {
 
 console.log(_Math1.add(5,2));
 console.log(_Math1.subtract(5,2));
-=======
 console.log(_MathLib.subtract(1,2));
->>>>>>> 806abbd718c1c2c9d99e4c2c057dd0aaba6c4db7
