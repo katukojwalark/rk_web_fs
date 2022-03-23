@@ -1,5 +1,5 @@
 /* 
-The following code is to display the current .js file name on the console.
+The following code is to display the current .js file info on the console.
 I have added this piece of code for debug purpose only.
 */
 var filepath;
@@ -22,3 +22,4 @@ console.log("Im logging this");
 var persons = {num:24242,"First Name":"sname", age: 30, favColors: ["red", "green", "blue"]};
 
 console.log(persons["First Name"])
+

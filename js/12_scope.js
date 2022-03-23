@@ -52,17 +52,42 @@ console.log("Global this.a: ", this.a);  // Prints 10
 // For example, console.log(_Math.add(2,2)); throws Uncaught TypeError.
 
 var _Math = (function() {
-    function add(a, b) { return a+b;}
-    function subtract(a, b) { return a-b;}
-    function multiply(a, b) { return a*b;}
+    function add(a, b) { return a+b; }
+    function subtract(a, b) { return a-b; }
+    function multiply(a, b) { return a*b; }
 })();
 
 // Solution:
 var _MathLib = (function() {
-    return{
-        add : function(a, b) { return a+b; },
-        subtract : function(a, b) { return a-b; },
-        multiply : function(a, b) { return a*b; }
+    return{                                        // An Object of functions we are returning. Here Each property is a function.
+        add : function(a, b) { return a+b; },      //add(a, b) { return a+b; },
+        subtract : function(a, b) { return a-b; }, //subtract(a, b) { return a-b; },
+        multiply : function(a, b) { return a*b; }  //multiply(a, b) { return a*b; }
     };
 }());
+<<<<<<< HEAD
+
+console.log(_MathLib.add(5,2));
+console.log(_MathLib.subtract(5,2));
+console.log(_MathLib.multiply(5,2));
+
+
+const _Math1 = (function() {
+    function addition(a, b) {
+        return a+b;
+    }
+    function subtraction(a,b) {
+        return a-b;
+    }
+
+    return {
+        add: addition,
+        subtract: subtraction,
+    };
+})();
+
+console.log(_Math1.add(5,2));
+console.log(_Math1.subtract(5,2));
+=======
 console.log(_MathLib.subtract(1,2));
+>>>>>>> 806abbd718c1c2c9d99e4c2c057dd0aaba6c4db7
