@@ -48,7 +48,7 @@ console.log("Removed Element: ", removedElement)
 console.log(dataBase);
 
 // How to remove the element at an index position?
-// splice(index, no_elements_from_index) : 
+// splice(index, no_elements_from_index) : splice is slice from a position. but unlike slice, splice removes the elements from the original array.
 
 removedElement = dataBase.splice(2, 3);   // removes 3 elements starting including from index pos 2;
 
@@ -57,7 +57,7 @@ console.log("Removed Element: ", removedElement);
 console.log(dataBase);
 
 // To extract some part of the array.
-// slice(ind, end_index). We aare not changing the actual array.
+// slice(start_index, end_index). slice does not change the actual array.
 
 var extractedEle = dataBase.slice(1, 3);
 
