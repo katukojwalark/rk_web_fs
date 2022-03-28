@@ -70,7 +70,6 @@ console.log(_MathLib.add(5,2));
 console.log(_MathLib.subtract(5,2));
 console.log(_MathLib.multiply(5,2));
 
-
 const _Math1 = (function() {
     function addition(a, b) {
         return a+b;

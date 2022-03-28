@@ -21,5 +21,5 @@ console.log("Im logging this");
 
 var persons = {num:24242,"First Name":"sname", age: 30, favColors: ["red", "green", "blue"]};
 
-console.log(persons["First Name"])
+console.log(persons["First Name"]);
 
