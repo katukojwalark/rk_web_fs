@@ -66,5 +66,7 @@ printInfoResult.call(studentInfo, 9, 10);
 printInfoResult.apply(movieInfo, [8, 10]);
 printInfoResult.apply(studentInfo, [9, 10]);
 
-printInfoResult.bind(movieInfo, 8, 10);
-printInfoResult.bind(studentInfo, 9, 10);
+fInfo = printInfoResult.bind(movieInfo, 9.1, 10);
+fInfo();
+
+printInfoResult.bind(studentInfo, 9.5, 10)();   // Here I'm calling the function directly.  We can follow this way when we do not really need the binding function later.
