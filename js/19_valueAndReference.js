@@ -97,6 +97,9 @@ function cloner(par) {
     console.log(par);
 }(cloner(iniObj)));
 
+// This approach is useful when you want to keep your choice of changing the original object open to the caller function.
+// you may want to send the parameter or a cloned parameter as per your choice.
+
 // or when you know you always want to work on the cloned withing the function.
 (function(par) {
     parCloned = cloner(par);

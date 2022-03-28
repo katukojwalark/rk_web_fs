@@ -140,3 +140,38 @@ function sum(a=2, b=3) {
 
 sum();
 sum(10, 20);
+
+// Object Constructor Functions:  Before ES6 there were no classes in JS we used object constructor functions, then.
+// Later classes arrived.
+// we follow a notation of first letter as capatal called Pascal notation - just to differentiate from a regular function.
+
+function Student(fname, sname, standard) {
+    this.fname = fname;
+    this.sname = sname;
+    this.standard = standard;
+
+    //return this;  // not a required. This is implicitly added by js engine.
+};
+
+var student1 = new Student("Bala", "Krishna", 4);
+var student2 = new Student("Balaya", "Babu", 4);
+
+console.log("student1", student1);
+console.log("student2", student2);
+
+// Modifying the student1 and student2
+student1.fullName = function(){ return this.fname + this.sname;}
+student2.nationality = "Indian";
+
+console.log("After modifying student1 and student2: ");
+
+console.log("student1.nationality: ", student1.nationality);  // Undefined property logged.
+console.log("student2.nationality: ", student2.nationality);
+console.log("student1.fullName()", student1.fullName());
+//console.log("student2", student2.fullName());  // This will give an error.
+
+// If you want to add any properties to all the objects of Student type, you can add it in the constructor function i.e. Student.
+// Is there a way to modify the constructor function from outside, in a similar way we added more properties to student1 and sutdent2 separately?
+// Ans: Yes.
+// How??
+
