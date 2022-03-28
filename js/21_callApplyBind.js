@@ -3,9 +3,16 @@ funLogFilePath();
 
 /*
 To combine a method to an object.
-Call Apply Bind.
+
+The call, bind and apply methods can be used to set the this keyword independent of how a function is called. Hence the function becomes generic for compatible objects.
+The bind method creates a copy of the function and sets the this keyword, while the call and apply methods sets the this keyword and calls the function immediately.
 
 Remember that call, apply, and bind are from ES5.  ES6 provides efficient ways to do it using the arrow functions.
+
+call: https://www.w3schools.com/js/js_function_call.asp
+apply: https://www.w3schools.com/js/js_function_apply.asp
+bind: https://www.w3schools.com/js/js_function_bind.asp
+
 */
 
 // Example:
