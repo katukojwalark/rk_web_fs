@@ -32,13 +32,14 @@ console.log(studentInfo);
 console.log(window);
 
 var printInfo = function() {
+    console.log("The Object that is in the context is: ", this._name);
     console.log(this._name, " is out in the year ", this.year);
 };
 
 // Using 'call'
 console.log("calling the printInfo using 'call' : ");
 
-printInfo.call();   // Equivalent to printInfo.call(this). But this object is the window object now which do not have _name and year properties 'bound' to it.
+// printInfo.call();   // Equivalent to printInfo.call(this). But this object is the window object now which do not have _name and year properties 'bound' to it.
 printInfo.call(movieInfo);
 printInfo.call(studentInfo);
 
@@ -64,6 +65,7 @@ fInfo();
 // Example:
 
 var printInfoResult = function(rating, outOf) {
+    console.log("The Object that is in the context is: ", this._name);
     console.log(this._name, " is out in the year ", this.year, " with a rating: ", rating, "/", outOf);
 }
 
