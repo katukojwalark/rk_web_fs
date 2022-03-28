@@ -5,9 +5,9 @@ funLogFilePath();
 To combine a method to an object.
 
 The call, bind and apply methods can be used to set the this keyword independent of how a function is called. Hence the function becomes generic for compatible objects.
-The bind method creates a copy of the function and sets the this keyword, while the call and apply methods sets the this keyword and calls the function immediately.
+The bind method creates a copy of the function and sets the this keyword, while the call and apply methods set the this keyword and calls the function immediately.
 
-Remember that call, apply, and bind are from ES5.  ES6 provides efficient ways to do it using the arrow functions.
+Remember that call, apply, and bind are from ES5.  ES6 provides efficient ways to do this using the arrow functions.
 
 call: https://www.w3schools.com/js/js_function_call.asp
 apply: https://www.w3schools.com/js/js_function_apply.asp
@@ -49,9 +49,9 @@ printInfo.apply(movieInfo);
 printInfo.apply(studentInfo);
 
 // Using 'bind'
-let fInfo = printInfo.bind(movieInfo);  // will return a printInfo function which is bound to movieInfo object.
-
 console.log("calling the printInfo using 'bind' : ");
+
+let fInfo = printInfo.bind(movieInfo);  // will return a printInfo function which is bound to movieInfo object.
 
 fInfo();
 
@@ -74,6 +74,17 @@ printInfoResult.apply(movieInfo, [8, 10]);
 printInfoResult.apply(studentInfo, [9, 10]);
 
 fInfo = printInfoResult.bind(movieInfo, 9.1, 10);
+//fInfo();
+
+// In the following line, I'm reusing the fInfo function.  Note: setTimeout() function calls the first param function after second parm milli sec of time.
+let timeDelay = 6000;
+console.log("I am going to execute: ", fInfo.name, "after: ", timeDelay, "milli sec");
+setTimeout(fInfo, timeDelay);
+
+// Here I'm calling the function immediately.  We can follow this way when we do not really need the binding function later.
+// But to do that we should ideally use call/apply.  Bind function is for reuse. 
+fInfo = printInfoResult.bind(studentInfo, 9.5, 10);
 fInfo();
 
-printInfoResult.bind(studentInfo, 9.5, 10)();   // Here I'm calling the function directly.  We can follow this way when we do not really need the binding function later.
+// Or..
+printInfoResult.bind(studentInfo, 4.5, 10)();
