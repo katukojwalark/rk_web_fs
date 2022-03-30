@@ -1,6 +1,3 @@
-funLogFilePath();
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 /*
 this: is used inside a function, and will always refer to a single object - the object that invokes the function where 'this' is used.
     But life isn’t perfect. Sometimes, we lose our this reference. Ex: when event listeners are added.

@@ -1,6 +1,3 @@
-funLogFilePath();
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 /*
 Functions to convert string into number: parseInt(String), parseFloat(String)
 Math.round(num):

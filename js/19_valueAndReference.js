@@ -1,6 +1,3 @@
-funLogFilePath();
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 /*
 Premitive datatypes are always copied as values. 
 Objects always copied as references by default. It's a shallow copy.

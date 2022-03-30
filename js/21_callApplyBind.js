@@ -1,6 +1,3 @@
-funLogFilePath();
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 /*
 To combine a method to an object.
 
@@ -79,7 +76,7 @@ fInfo = printInfoResult.bind(movieInfo, 9.1, 10);
 //fInfo();
 
 // In the following line, I'm reusing the fInfo function.  Note: setTimeout() function calls the first param function after second parm milli sec of time.
-let timeDelay = 6000;
+let timeDelay = 0; //6000
 console.log("I am going to execute: ", fInfo.name, "after: ", timeDelay, "milli sec");
 setTimeout(fInfo, timeDelay);
 

@@ -3,7 +3,7 @@ The following code is to display the current .js file info on the console.
 I have added this piece of code for debug purpose only.
 */
 var filepath;
-function funLogFilePath(){ 
+function funLogFilePath() { 
     var scripts = document.getElementsByTagName('script'); 
     filepath = scripts[ scripts.length-1 ].src; 
     console.log("########## ", filepath, " ##########");
@@ -13,6 +13,9 @@ funLogFilePath();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 /* 
+https://javascript.info/
+https://www.w3schools.com/default.asp
+
 Premitive datatypes: string, numbner, null boolean, undefined 
 To log to the console: console.log("ghdgkhd")
 */

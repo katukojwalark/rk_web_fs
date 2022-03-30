@@ -1,6 +1,3 @@
-funLogFilePath();
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 /*
 string comparision:
     indexOf(serchStr), lastIndexOf(serchStr), search(serchStr): return the index of match otherwise -1
