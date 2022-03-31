@@ -2,6 +2,7 @@
 
 https://www.w3schools.com/js/js_htmldom.asp
 https://javascript.info/dom-nodes
+Info on Documents: https://javascript.info/document
 
 With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
 document object is a property of the window object.
