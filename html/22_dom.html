@@ -7,11 +7,72 @@
     <title>DOM: DocumentObjectModel</title>
 </head>
 <body>
-    <a href="/index.html">
-    <button>Home</button>
+    <a href="/index.html"><button >Home</button></a>
 
     <h1>The HTML DOM Tree of Objects</h1>
     <img src="/utilities/images/pic_htmltree.gif" alt="DOM tree Image not found.">
+    
+    <hr>
+
+    <div padding-top:100px>
+        <p class="Intro">
+            With the HTML DOM, JavaSccript can access and change all teh elements of an HTML document. 
+            <br>
+            When a web page is loaded, the browser creates a <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel of the page. 
+            <br>
+            <br>
+            With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+            <ul>
+                <li>JavaScript can change all the HTML elements in the page</li>
+                <li>JavaScript can change all the HTML attributes in the page</li>
+                <li>JavaScript can change all the CSS styles in the page</li>
+                <li>JavaScript can remove existing HTML elements and attributes</li>
+                <li>JavaScript can add new HTML elements and attributes</li>
+                <li>JavaScript can react to all existing HTML events in the page</li>
+                <li>JavaScript can create new HTML events in the page</li>
+            </ul>
+
+            <h2>What is the HTML DOM?</h2>
+            <p>The HTML DOM is a standard <strong>object</strong> model and <strong>
+                programming interface</strong> for HTML. It defines:</p>
+            </p>
+            <ul>
+                <li>The HTML elements as <b>objects</b>
+                </li><li>The <b>properties</b> of all HTML elements
+                </li><li>The <b>methods</b> to access all HTML elements</li>
+                <li>The <strong>events</strong> for all HTML elements</li>
+            </ul>
+            <p>In other words:<b> The HTML DOM is a standard for how to <u> get, change, add, or delete HTML elements.</u></b></p>
+    </div>
+
+    <!-- See it for yourself: -->
+    <h2><a class="main__anchor" name="see-it-for-yourself" href="#see-it-for-yourself">See it for yourself</a></h2>
+    <p>To see the DOM structure in real-time, try <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewer</a>. Just type in the document, and it will show up as a DOM at an instant.</p>
+
+    <!-- Interaction with Console -->
+    <h2><a class="main__anchor" name="interaction-with-console" href="#interaction-with-console">Interaction with console</a></h2>
+    <p>
+        As we work the DOM, we also may want to apply JavaScript to it. 
+        Like: get a node and run some code to modify it, to see the result. Here are few tips to travel between the Elements tab and the console.
+    </p>
+    <p>For the start:</p>
+    <ol>
+        <li>Select the first <code>&lt;li&gt;</code> in the Elements tab.</li>
+        <li>Press <kbd class="shortcut">Esc</kbd> – it will open console right below the Elements tab.</li>
+    </ol>
+    <p>Now the last selected element is available as <code>$0</code>, the previously selected is <code>$1</code> etc.</p>
+    <p>We can run commands on them. For instance, <code>$0.style.background = 'red'</code> makes the selected list item red, like this:</p>
+
+    <figure><div class="image" style="width:699px">
+        <object type="image/svg+xml" data="/article/dom-nodes/domconsole0.svg" width="699" height="450" class="image__image" data-use-theme="">
+          <img src="/utilities/images/InteractionWithConsole.png" alt="" width="700">
+        </object>
+        </div>
+    </figure>
+
+
+
     <h2>Java Script Code</h2>
    
     <!-- Displaying my js source code as is. -->
