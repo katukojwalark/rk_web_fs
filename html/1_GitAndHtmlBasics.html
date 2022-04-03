@@ -110,16 +110,97 @@ HTML contains different elements that define the structure of a web page:
     }
     footer{
         background-color: bisque;
-        color: white;
+        color: rgb(43, 22, 236);
         clear: both;
         text-align: center;
         padding: 5px;
     }
+
+    /*Styling for git commands*/
+    div.codeblock {
+        /*border: 1px dashed green;*/
+        font-family: Consolas, "Courier New", Courier, monospace;
+        color:rgb(6, 190, 68);
+        font-size: 1em ;
+        padding: 8px ;
+    }
 </style>
 
 <body>
-    <a href="/index.html"><button >Home</button></a>
+    <a href="/index.html" ><button >Home</button ></a>
 
+    <br>
+    <br>
+  
+    <h1>Git and HTML Basics</h1>
+    <h2>Git Basics</h2>
+    <p> Here is some basic information about GitHub: <a href="https://www.youtube.com/watch?v=-LfyYDuryT4" target="_blank">GitHub Basics</a> </p>
+    <p> My GitHub account details: <a href="https://github.com/katukojwalark" target="_blank">katukojwalark</a> </p>
+    <h3>Useful Git Commands</h3>
+     <p>
+         <ol>
+             <li>Create a branch, we do not work on the main branch. You can create it from the github branch dropdown or use a git command 'git checkout -b my-branch'. 
+                 Do a "git checkout -help" to know more.
+                 <div class="codeblock">$ git checkout -b my-branch</div>
+             </li>
+             <li>
+                Adding the upstream for the repository <b >'rk_web_fs' </b>: 
+                <div class="codeblock"> $ git remote add upstream  https://github.com/katukojwalark/rk_web_fs</div>
+             </li>
+             <li>
+                Adding the Origin: 
+                <div class="codeblock">$ git remote add origin https://github.com/katukojwalark/rk_web_fs.git (copy this Link from the drop down code from your main branch)</div>
+             </li>
+             <li>
+                Check for the Upstream and Origin: 
+                <div class="codeblock">$ git remote -v</div>
+             </li>
+             <li>
+                Fetch upstream: downloads commits, files, and refs from a remote repository into your local repo. 
+                Fetching is what you do when you want to see what everybody else has been working on.
+        
+                <div class="codeblock">$ git fetch upstream</div>
+             </li>
+             <li>
+                Update your branch from the upstream:
+                <div class="codeblock">$ git rebase upstream/main</div>
+             </li>
+             <li>
+                Make your code changes.  You have already created the branch. 
+                If not created, using '-b' will create and switchest to it.
+                <div class="codeblock">$ git checkout -b my-branch-name</div>
+             </li>
+             <li>
+                 You have made your code changes check the files that are modified or added using,
+                 <div class="codeblock">$ git status</div>
+            </li>
+            <li>
+                Now you can stage the files you are about to commit using $ git add file-name or you can stage all, 
+                <div class="codeblock">$ git add . (or) $ git add file-name</div>
+            </li>
+            <li>
+                You have staged your changes and are ready to commit to a branch.  Double check the files that you want to commit using the,
+                <div class="codeblock">$ git status</div>
+            </li>
+            <li>
+                Commit the changes to the branch.
+                <div class="codeblock">$ git commit or git commit -m "my message describing the commiting changes"</div>
+            </li>
+            <li>
+                You have commited the changes to a branch. You need to share it to others to get the code reviews done.
+                <div class="codeblock">$ git push origin rk-branch</div>
+            </li>
+            <li>
+                Go to GitHub and raise PR from there. GitHub highlights a message like " rk-branch had recent pushes less than a minute ago" with a button "Compare & pull request" click it to raise a PR.
+            </li>
+            <li>
+                On successful review, merge your changes to the main branch.
+            </li>
+            
+        </ol>
+        If you are the owner of the repository, you can directly submit the changes to the 'main' branch.
+        When you submit to a main branch no PR is created.
+    </p>   
     <header>Header Section</header>
     <nav>Navigation Bar</nav>
     <section>Index</section>
