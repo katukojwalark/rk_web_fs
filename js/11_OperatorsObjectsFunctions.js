@@ -113,7 +113,7 @@ console.log(productExp);
 
 // Arrow Functions: https://www.javascripttutorial.net/es6/javascript-arrow-function/
 
-productExp = (v1, v2) => v1*v2;  // (v1, v2) => {v1*v2;}
+productExp = (v1, v2) => {v1*v2;}  // (v1, v2) => v1*v2;  When there is only one statement in the block we can omit the curly braces.
 
 let square = (x) => x*x;  // When single paramater you can even omit the parentheses. Ex:  square = x => x*x;
 

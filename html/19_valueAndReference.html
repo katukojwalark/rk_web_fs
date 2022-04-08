@@ -7,12 +7,20 @@
     <title>ValueAndReference</title>
 </head>
 <body>
-    <a href="/index.html"><button >Home</button></a>
+    <a href="/WebDevFS/index.html"><button >Home</button></a>
 
     <h1>Value and References</h1>
+    <p>
+        <ul>
+            <li>Premitive datatypes are always copied as values.</li>
+            <li>Objects always copied as references by default. It's a shallow copy.</li>
+            <li>Same applies for the function calls.  Objects are always copied by reference and premitive datatypes by value.</li>
+            <li>You can copy objects by deep copy using JSON.parse(JSON.stringify(srcObj))</li>
+        </ul>
+    </p>
     
     <!-- Running my script -->
-    <script src="/js/19_valueAndReference.js"></script>
+    <script src="../js/19_valueAndReference.js"></script>
 
     <h2>Java Script Code</h2>
 
