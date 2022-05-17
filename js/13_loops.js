@@ -1,5 +1,5 @@
 /*
-for, for-in, for-of, while.
+for, for-in, for-of, while, do-while, forEach
 
 
 */
@@ -33,3 +33,10 @@ while(j<shoppingList.length) {
     console.log(shoppingList[j]);
     j++;
 }
+
+// forEach
+var arr = ['item1', 'item2', 'item3', 'item4'];
+
+arr.forEach(function(val) {
+    console.log(val);
+})

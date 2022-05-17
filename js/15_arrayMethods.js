@@ -61,3 +61,22 @@ var extractedEle = dataBase.slice(1, 3);
 console.log("Extracted/slieced Element: ", extractedEle);
 
 console.log(dataBase);
+
+// forEach expacts a function to be passed as an argument and that function takes a maximum of 3 arguments.
+var arr = ['item1', 'item2', 'item3', 'item4'];
+
+arr.forEach(function(val) {
+    console.log(val);
+})
+
+// The above forEach internally works as follows, the function we providing as an argument will be stored into a callback function.
+// function forEach(callback) {
+//     for (var i=0; i<arr.length; i++) {
+//         callback(arr[i]);
+//     }
+// }
+
+// map function
+arr.map(function(val) {
+    console.log(val);
+})

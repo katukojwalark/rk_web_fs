@@ -68,7 +68,10 @@ return v1+v2;
 
 console.log(add(10, 20));
 
-// Anonymous functions. No name
+// Anonymous functions. No name.
+// Anonymous functions are useful when we do not want to call them specifically or we want to call it only once as in case of IIFEs.
+// Often they are callback functions, where we do not wish to call them explicitly.
+
 var fExpression = function() {
     console.log("Ananomous Function");
 }
@@ -76,9 +79,20 @@ var fExpression = function() {
 // Function call
 fExpression();
 
+// Anonymous function as a function parameter.
+// Note that function expressions gives us a handle to reuse an anonymous functions multiple times.
+function foo(fExpression) {
+    console.log("I have passed an anonymous function as an argument to this function");
+}
+
+foo();
+
+// When we want the function to NO more useable.
+fExpression = null;
+
 /* 
     Note: Once you declare a function you can call it even before its declaration. But This is not the case with Anonymous functions, which act like variables.
-    Reason: Named functions are added to global address space. Hence can be called from lines before the declaration.
+    Reason: Named functions are added to global address space, hence can be called from lines before the declaration.
     Anonymous functions have their own this object which overrides the one in the context where the function is used.
 */
 
@@ -172,3 +186,19 @@ console.log("student1.fullName()", student1.fullName());
 // Is there a way to modify the constructor function from outside, in a similar way we added more properties to student1 and sutdent2 separately?
 // Ans: Yes.
 // How??
+
+
+// ES6. Function Arguments:
+
+(function(a, b, c,) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    console.log("arguments: ", arguments);
+    
+    console.log("arguments['3']", arguments['3']);
+    console.log("arguments['4']", arguments['4']);
+
+})(10, 20, 30, 40);
+
