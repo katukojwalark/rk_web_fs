@@ -12,6 +12,34 @@ bind: https://www.w3schools.com/js/js_function_bind.asp
 
 */
 
+// What is the output of the following?
+
+function f1(b) {
+    b += 20;
+}
+var a = 10;
+f1(a);
+console.log(a)
+
+// Observe that for premitive datatypes the function calls are by value and for the user defined objects (or arrays) its always by reference.
+
+var employee1 = {
+    name: "Rajesh",
+    address: "Bangalore",
+
+    getDetails: function() {    // function(a, b, c)
+        return this.name + "\t" + this.address; // return this.name + "\t" + this.address + "\t" + a + "\t" + b + "\t" + c; 
+    }
+}
+
+var employee2 = {
+    name: "Ramesh",
+    address: "Mangalore",
+}
+
+// We want the getDetails function for employee2
+console.log(employee1.getDetails.call(employee2));  // console.log(employee1.getDetails.call(employee2, 10, 20, 30));
+
 // Example:
 var movieInfo = {
     _name : "MovieName",
@@ -26,7 +54,6 @@ var studentInfo = {
 console.log(movieInfo);
 console.log(studentInfo);
 
-console.log(window);
 
 var printInfo = function() {
     console.log("The Object that is in the context is: ", this._name);
@@ -34,7 +61,7 @@ var printInfo = function() {
 };
 
 // Using 'call'
-console.log("calling the printInfo using 'call' : ");
+console.log("Invoking the printInfo using 'call' : ");
 
 // printInfo.call();   // Equivalent to printInfo.call(this). But this object is the window object now which do not have _name and year properties 'bound' to it.
 printInfo.call(movieInfo);

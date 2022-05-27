@@ -17,6 +17,8 @@ console.log(typeof i);
 === is used for comparision between two variables but this will check strict type, which means it will check datatype and compare two values.
 */
 
+import fetch from 'node-fetch';
+
 console.log("2" == 2);  //true
 console.log("2" === 2);  //false
 
@@ -109,11 +111,11 @@ fExpression = null;
     4. prevent conflicts between script files that could have the same variable names — anonymous functions & IIFE
 */
 
-let productExp = function(v1, v2) {
+let prod = function(v1, v2) {
     return v1*v2;
-} (2, 3)
+} (2, 3);
 
-console.log(productExp);
+console.log(prod);
 
 (function(v1, v2) { //This is an Anonymous IIFE
     prod = v1*v2;
@@ -122,8 +124,8 @@ console.log(productExp);
 })(4,5);
 
 (function foo() {   // This is a named IIFE
-    // Do something;
-})()
+    console.log("I'm self invoked and only once.");
+})();
 
 // Arrow Functions: https://www.javascripttutorial.net/es6/javascript-arrow-function/
 
@@ -202,3 +204,26 @@ console.log("student1.fullName()", student1.fullName());
 
 })(10, 20, 30, 40);
 
+
+// A real time example for callbacks and anonymous functions.
+
+(function() {
+
+    var respUsers = null;
+
+    var http = new XMLHttpRequest();
+
+    http.open('get', "https://jsonplaceholder.typicode.com/users")
+
+    console.log(http.readyState);  // for various states and status check https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
+
+    http.send();
+    http.onreadystatechange = function() {
+        console.log("inside ready state", http.readyState);
+        if(http.readyState==4 && http.status==200) {
+            respUsers = http.responseText;
+            console.log(respUsers);
+        }
+    }
+}
+)();
